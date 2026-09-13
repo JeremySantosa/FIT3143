@@ -9,3 +9,4 @@ Jeremy Santosa (33988714) jsan0067@student.monash.edu
 ## presenation slides link: 
 
 ## report docs link
+https://docs.google.com/document/d/1sd78tLT8Abu5XZrg5_8mSpg9G9cVRRTFq_fOxCjllmY/edit?usp=sharing
