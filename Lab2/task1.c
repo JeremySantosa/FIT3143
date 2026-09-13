@@ -1,6 +1,5 @@
 #include <math.h>
 #include <stdio.h>
-#include <time.h>
 #include <mpi.h> // MPI header
 #include <stdlib.h> // needed for arrays
 
@@ -58,9 +57,6 @@ int main(int argc, char *argv[]) {
             outputFile = fopen("output_t3.txt", "w");
         }
     }
-
-    struct timespec start;
-    struct timespec end;
 
     // record elapsed time before starting
     MPI_Barrier(MPI_COMM_WORLD); // this synchronizes all processes before starting a timer
