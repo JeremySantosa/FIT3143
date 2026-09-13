@@ -54,7 +54,7 @@ int main(int argc, char *argv[]) {
             outputFile = stdout;
         }
         else {
-            outputFile = fopen("output_t3.txt", "w");
+            outputFile = fopen("output_t1.txt", "w");
         }
     }
 
