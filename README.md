@@ -1,3 +1,8 @@
+# LAB 3
+
+https://docs.google.com/presentation/d/1X61PmgHXXQgYWXz2eOG_1VjMjF-4bdjDoifs74j6nOc/edit?usp=sharing
+
+
 # FIT3143Lab2
 GIt repository for FIT3143 lab 2
 
