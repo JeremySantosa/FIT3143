@@ -1,0 +1,6 @@
+simulation_seconds=30.000 window_seconds=3.000 grid=5x5
+t=6.049215 sender=20 xy=(4,0) ports=0 incident_timestamp=1792332663 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=1 16
+t=18.186666 sender=24 xy=(4,4) ports=0 incident_timestamp=1792332676 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=1 18
+t=27.087316 sender=4 xy=(0,4) ports=0 incident_timestamp=1792332684 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=1 8
+t=27.160731 sender=2 xy=(0,2) ports=0 incident_timestamp=1792332685 neighbours=3 neighbour_messages=6 neighbour_bytes=24 candidates=2 6 8
+summary elapsed_seconds=30.000087 alerts=4 inbound_reports=4 outbound_messages=29 total_base_messages=33

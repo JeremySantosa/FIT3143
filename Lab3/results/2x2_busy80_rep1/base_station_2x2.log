@@ -1,0 +1,4 @@
+simulation_seconds=30.000 window_seconds=3.000 grid=2x2
+t=24.121245 sender=3 xy=(1,1) ports=0 incident_timestamp=1792332312 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=1 0
+t=27.113440 sender=0 xy=(0,0) ports=0 incident_timestamp=1792332315 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=0
+summary elapsed_seconds=30.000005 alerts=2 inbound_reports=2 outbound_messages=6 total_base_messages=8

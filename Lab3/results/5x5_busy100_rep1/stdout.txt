@@ -1,0 +1,801 @@
+Rank 17 (3,2) neighbours=4: 12 22 16 18
+Rank 18 (3,3) neighbours=4: 13 23 17 19
+Rank 19 (3,4) neighbours=3: 14 24 18
+Rank 20 (4,0) neighbours=2: 15 21
+Rank 21 (4,1) neighbours=3: 16 20 22
+Rank 22 (4,2) neighbours=3: 17 21 23
+Rank 23 (4,3) neighbours=3: 18 22 24
+Rank 24 (4,4) neighbours=2: 19 23
+Rank 1 (0,1) neighbours=3: 6 0 2
+Rank 2 (0,2) neighbours=3: 7 1 3
+Rank 3 (0,3) neighbours=3: 8 2 4
+Rank 4 (0,4) neighbours=2: 9 3
+Rank 5 (1,0) neighbours=3: 0 10 6
+Rank 6 (1,1) neighbours=4: 1 11 5 7
+Rank 9 (1,4) neighbours=3: 4 14 8
+Rank 10 (2,0) neighbours=3: 5 15 11
+Rank 13 (2,3) neighbours=4: 8 18 12 14
+Rank 14 (2,4) neighbours=3: 9 19 13
+Rank 16 (3,1) neighbours=4: 11 21 15 17
+Rank 15 (3,0) neighbours=3: 10 20 16
+Rank 0 (0,0) neighbours=2: 5 1
+Rank 7 (1,2) neighbours=4: 2 12 6 8
+Rank 8 (1,3) neighbours=4: 3 13 7 9
+Rank 11 (2,1) neighbours=4: 6 16 10 12
+Rank 12 (2,2) neighbours=4: 7 17 11 13
+Base station rank 25 running for 30.0 s, grid 5x5
+Rank 1 | 2026 10 19 01 12 00 | 0 free
+Rank 2 | 2026 10 19 01 12 00 | 0 free
+Rank 19 | 2026 10 19 01 12 00 | 0 free
+Rank 9 | 2026 10 19 01 12 00 | 0 free
+Rank 18 | 2026 10 19 01 12 00 | 0 free
+Rank 6 | 2026 10 19 01 12 00 | 0 free
+Rank 3 | 2026 10 19 01 12 00 | 0 free
+Rank 16 | 2026 10 19 01 12 00 | 0 free
+Rank 17 | 2026 10 19 01 12 00 | 0 free
+Rank 14 | 2026 10 19 01 12 00 | 0 free
+Rank 4 | 2026 10 19 01 12 00 | 0 free
+Rank 5 | 2026 10 19 01 12 00 | 0 free
+Rank 4: neighbours full, reported congestion to base station
+Rank 13 | 2026 10 19 01 12 00 | 0 free
+Rank 20 | 2026 10 19 01 12 00 | 0 free
+Rank 4: forwarding EVs to nodes: 8  (reply took 0.0151 s) 
+Rank 0 | 2026 10 19 01 12 00 | 0 free
+Rank 14: neighbours full, reported congestion to base station
+Rank 1: neighbours full, reported congestion to base station
+Rank 21 | 2026 10 19 01 12 00 | 0 free
+Rank 14: forwarding EVs to nodes: 8 18  (reply took 0.0085 s) 
+Rank 0: neighbours full, reported congestion to base station
+Rank 1: forwarding EVs to nodes: 5 7  (reply took 0.0226 s) 
+Rank 10 | 2026 10 19 01 12 00 | 0 free
+Rank 23 | 2026 10 19 01 12 00 | 0 free
+Rank 5: neighbours full, reported congestion to base station
+Rank 0: forwarding EVs to nodes: 10  (reply took 0.0138 s) 
+Rank 24 | 2026 10 19 01 12 00 | 0 free
+Rank 7 | 2026 10 19 01 12 00 | 0 free
+Rank 2: neighbours full, reported congestion to base station
+Rank 18: neighbours full, reported congestion to base station
+Rank 5: forwarding EVs to nodes: 11  (reply took 0.0082 s) 
+Rank 24: neighbours full, reported congestion to base station
+Rank 19: neighbours full, reported congestion to base station
+Rank 12 | 2026 10 19 01 12 00 | 0 free
+Rank 18: forwarding EVs to nodes: 12 22 24  (reply took 0.0200 s) 
+Rank 8 | 2026 10 19 01 12 00 | 0 free
+Rank 3: neighbours full, reported congestion to base station
+Rank 9: neighbours full, reported congestion to base station
+Rank 13: neighbours full, reported congestion to base station
+Rank 19: base station (rank 25) reports no available capacity, delay=0.02 seconds
+Rank 7: neighbours full, reported congestion to base station
+Rank 22 | 2026 10 19 01 12 00 | 0 free
+Rank 22: neighbours full, reported congestion to base station
+Rank 23: neighbours full, reported congestion to base station
+Rank 8: neighbours full, reported congestion to base station
+Rank 2: forwarding EVs to nodes: 8  (reply took 0.0360 s) 
+Rank 17: neighbours full, reported congestion to base station
+Rank 21: neighbours full, reported congestion to base station
+Rank 3: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 7: forwarding EVs to nodes: 11  (reply took 0.0058 s) 
+Rank 24: forwarding EVs to nodes: 22  (reply took 0.0380 s) 
+Rank 8: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 9: base station (rank 25) reports no available capacity, delay=0.02 seconds
+Rank 11 | 2026 10 19 01 12 00 | 0 free
+Rank 12: neighbours full, reported congestion to base station
+Rank 13: forwarding EVs to nodes: 11  (reply took 0.0271 s) 
+Rank 11: neighbours full, reported congestion to base station
+Rank 17: forwarding EVs to nodes: 11 21  (reply took 0.0196 s) 
+Rank 6: neighbours full, reported congestion to base station
+Rank 21: forwarding EVs to nodes: 15  (reply took 0.0223 s) 
+Rank 22: base station (rank 25) reports no available capacity, delay=0.02 seconds
+Rank 23: base station (rank 25) reports no available capacity, delay=0.03 seconds
+Rank 6: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 11: forwarding EVs to nodes: 15  (reply took 0.0054 s) 
+Rank 12: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 15 | 2026 10 19 01 12 00 | 0 free
+Rank 20: neighbours full, reported congestion to base station
+Rank 16: neighbours full, reported congestion to base station
+Rank 15: neighbours full, reported congestion to base station
+Rank 20: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 10: neighbours full, reported congestion to base station
+Rank 16: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 10: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 15: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 1 | 2026 10 19 01 12 03 | 0 free
+Rank 1: neighbours full, reported congestion to base station
+Rank 1: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 2 | 2026 10 19 01 12 03 | 0 free
+Rank 2: neighbours full, reported congestion to base station
+Rank 2: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 19 | 2026 10 19 01 12 03 | 0 free
+Rank 19: neighbours full, reported congestion to base station
+Rank 19: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 18 | 2026 10 19 01 12 03 | 0 free
+Rank 9 | 2026 10 19 01 12 03 | 0 free
+Rank 9: neighbours full, reported congestion to base station
+Rank 9: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 18: neighbours full, reported congestion to base station
+Rank 18: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 6 | 2026 10 19 01 12 03 | 0 free
+Rank 3 | 2026 10 19 01 12 03 | 0 free
+Rank 6: neighbours full, reported congestion to base station
+Rank 6: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 16 | 2026 10 19 01 12 03 | 0 free
+Rank 3: neighbours full, reported congestion to base station
+Rank 3: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 16: neighbours full, reported congestion to base station
+Rank 16: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 17 | 2026 10 19 01 12 03 | 0 free
+Rank 17: neighbours full, reported congestion to base station
+Rank 17: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 14 | 2026 10 19 01 12 03 | 0 free
+Rank 14: neighbours full, reported congestion to base station
+Rank 4 | 2026 10 19 01 12 03 | 0 free
+Rank 13 | 2026 10 19 01 12 03 | 0 free
+Rank 20 | 2026 10 19 01 12 03 | 0 free
+Rank 5 | 2026 10 19 01 12 03 | 0 free
+Rank 14: base station (rank 25) reports no available capacity, delay=0.02 seconds
+Rank 13: neighbours full, reported congestion to base station
+Rank 0 | 2026 10 19 01 12 03 | 0 free
+Rank 13: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 0: neighbours full, reported congestion to base station
+Rank 0: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 20: neighbours full, reported congestion to base station
+Rank 5: neighbours full, reported congestion to base station
+Rank 4: neighbours full, reported congestion to base station
+Rank 21 | 2026 10 19 01 12 03 | 0 free
+Rank 5: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 20: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 4: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 21: neighbours full, reported congestion to base station
+Rank 21: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 10 | 2026 10 19 01 12 03 | 0 free
+Rank 10: neighbours full, reported congestion to base station
+Rank 7 | 2026 10 19 01 12 03 | 0 free
+Rank 7: neighbours full, reported congestion to base station
+Rank 10: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 7: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 23 | 2026 10 19 01 12 03 | 0 free
+Rank 12 | 2026 10 19 01 12 03 | 0 free
+Rank 24 | 2026 10 19 01 12 03 | 0 free
+Rank 23: neighbours full, reported congestion to base station
+Rank 12: neighbours full, reported congestion to base station
+Rank 12: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 23: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 8 | 2026 10 19 01 12 03 | 0 free
+Rank 8: neighbours full, reported congestion to base station
+Rank 8: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 11 | 2026 10 19 01 12 03 | 0 free
+Rank 24: neighbours full, reported congestion to base station
+Rank 22 | 2026 10 19 01 12 03 | 0 free
+Rank 24: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 11: neighbours full, reported congestion to base station
+Rank 11: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 22: neighbours full, reported congestion to base station
+Rank 22: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 15 | 2026 10 19 01 12 03 | 0 free
+Rank 15: neighbours full, reported congestion to base station
+Rank 15: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 1 | 2026 10 19 01 12 06 | 0 free
+Rank 1: neighbours full, reported congestion to base station
+Rank 1: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 2 | 2026 10 19 01 12 06 | 0 free
+Rank 2: neighbours full, reported congestion to base station
+Rank 2: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 19 | 2026 10 19 01 12 06 | 0 free
+Rank 19: neighbours full, reported congestion to base station
+Rank 19: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 9 | 2026 10 19 01 12 06 | 0 free
+Rank 18 | 2026 10 19 01 12 06 | 0 free
+Rank 9: neighbours full, reported congestion to base station
+Rank 9: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 18: neighbours full, reported congestion to base station
+Rank 18: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 3 | 2026 10 19 01 12 06 | 0 free
+Rank 16 | 2026 10 19 01 12 06 | 0 free
+Rank 6 | 2026 10 19 01 12 06 | 0 free
+Rank 3: neighbours full, reported congestion to base station
+Rank 3: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 17 | 2026 10 19 01 12 06 | 0 free
+Rank 17: neighbours full, reported congestion to base station
+Rank 16: neighbours full, reported congestion to base station
+Rank 16: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 17: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 14 | 2026 10 19 01 12 06 | 0 free
+Rank 14: neighbours full, reported congestion to base station
+Rank 14: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 4 | 2026 10 19 01 12 06 | 0 free
+Rank 6: neighbours full, reported congestion to base station
+Rank 6: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 13 | 2026 10 19 01 12 06 | 0 free
+Rank 4: neighbours full, reported congestion to base station
+Rank 4: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 13: neighbours full, reported congestion to base station
+Rank 13: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 20 | 2026 10 19 01 12 06 | 0 free
+Rank 20: neighbours full, reported congestion to base station
+Rank 20: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 5 | 2026 10 19 01 12 06 | 0 free
+Rank 0 | 2026 10 19 01 12 06 | 0 free
+Rank 21 | 2026 10 19 01 12 06 | 0 free
+Rank 0: neighbours full, reported congestion to base station
+Rank 5: neighbours full, reported congestion to base station
+Rank 21: neighbours full, reported congestion to base station
+Rank 21: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 0: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 5: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 10 | 2026 10 19 01 12 06 | 0 free
+Rank 10: neighbours full, reported congestion to base station
+Rank 10: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 7 | 2026 10 19 01 12 06 | 0 free
+Rank 7: neighbours full, reported congestion to base station
+Rank 7: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 23 | 2026 10 19 01 12 06 | 0 free
+Rank 12 | 2026 10 19 01 12 06 | 0 free
+Rank 23: neighbours full, reported congestion to base station
+Rank 24 | 2026 10 19 01 12 06 | 0 free
+Rank 24: neighbours full, reported congestion to base station
+Rank 12: neighbours full, reported congestion to base station
+Rank 23: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 24: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 12: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 8 | 2026 10 19 01 12 06 | 0 free
+Rank 8: neighbours full, reported congestion to base station
+Rank 8: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 11 | 2026 10 19 01 12 06 | 0 free
+Rank 22 | 2026 10 19 01 12 06 | 0 free
+Rank 22: neighbours full, reported congestion to base station
+Rank 11: neighbours full, reported congestion to base station
+Rank 22: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 11: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 15 | 2026 10 19 01 12 06 | 0 free
+Rank 15: neighbours full, reported congestion to base station
+Rank 15: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 1 | 2026 10 19 01 12 09 | 0 free
+Rank 1: neighbours full, reported congestion to base station
+Rank 1: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 2 | 2026 10 19 01 12 09 | 0 free
+Rank 2: neighbours full, reported congestion to base station
+Rank 2: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 19 | 2026 10 19 01 12 09 | 0 free
+Rank 9 | 2026 10 19 01 12 09 | 0 free
+Rank 9: neighbours full, reported congestion to base station
+Rank 19: neighbours full, reported congestion to base station
+Rank 18 | 2026 10 19 01 12 09 | 0 free
+Rank 18: neighbours full, reported congestion to base station
+Rank 9: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 18: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 19: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 3 | 2026 10 19 01 12 09 | 0 free
+Rank 3: neighbours full, reported congestion to base station
+Rank 16 | 2026 10 19 01 12 09 | 0 free
+Rank 3: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 17 | 2026 10 19 01 12 09 | 0 free
+Rank 6 | 2026 10 19 01 12 09 | 0 free
+Rank 16: neighbours full, reported congestion to base station
+Rank 16: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 14 | 2026 10 19 01 12 09 | 0 free
+Rank 6: neighbours full, reported congestion to base station
+Rank 17: neighbours full, reported congestion to base station
+Rank 6: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 4 | 2026 10 19 01 12 09 | 0 free
+Rank 4: neighbours full, reported congestion to base station
+Rank 4: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 14: neighbours full, reported congestion to base station
+Rank 14: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 17: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 13 | 2026 10 19 01 12 09 | 0 free
+Rank 20 | 2026 10 19 01 12 09 | 0 free
+Rank 20: neighbours full, reported congestion to base station
+Rank 20: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 5 | 2026 10 19 01 12 09 | 0 free
+Rank 13: neighbours full, reported congestion to base station
+Rank 13: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 0 | 2026 10 19 01 12 09 | 0 free
+Rank 5: neighbours full, reported congestion to base station
+Rank 5: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 0: neighbours full, reported congestion to base station
+Rank 0: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 21 | 2026 10 19 01 12 09 | 0 free
+Rank 10 | 2026 10 19 01 12 09 | 0 free
+Rank 10: neighbours full, reported congestion to base station
+Rank 10: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 21: neighbours full, reported congestion to base station
+Rank 21: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 7 | 2026 10 19 01 12 09 | 0 free
+Rank 7: neighbours full, reported congestion to base station
+Rank 7: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 23 | 2026 10 19 01 12 09 | 0 free
+Rank 23: neighbours full, reported congestion to base station
+Rank 23: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 12 | 2026 10 19 01 12 09 | 0 free
+Rank 24 | 2026 10 19 01 12 09 | 0 free
+Rank 12: neighbours full, reported congestion to base station
+Rank 24: neighbours full, reported congestion to base station
+Rank 24: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 12: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 11 | 2026 10 19 01 12 09 | 0 free
+Rank 8 | 2026 10 19 01 12 09 | 0 free
+Rank 11: neighbours full, reported congestion to base station
+Rank 11: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 8: neighbours full, reported congestion to base station
+Rank 8: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 22 | 2026 10 19 01 12 09 | 0 free
+Rank 15 | 2026 10 19 01 12 09 | 0 free
+Rank 15: neighbours full, reported congestion to base station
+Rank 22: neighbours full, reported congestion to base station
+Rank 15: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 22: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 1 | 2026 10 19 01 12 12 | 0 free
+Rank 1: neighbours full, reported congestion to base station
+Rank 1: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 2 | 2026 10 19 01 12 12 | 0 free
+Rank 2: neighbours full, reported congestion to base station
+Rank 2: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 19 | 2026 10 19 01 12 12 | 0 free
+Rank 19: neighbours full, reported congestion to base station
+Rank 9 | 2026 10 19 01 12 12 | 0 free
+Rank 19: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 9: neighbours full, reported congestion to base station
+Rank 9: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 18 | 2026 10 19 01 12 12 | 0 free
+Rank 18: neighbours full, reported congestion to base station
+Rank 18: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 3 | 2026 10 19 01 12 12 | 0 free
+Rank 3: neighbours full, reported congestion to base station
+Rank 16 | 2026 10 19 01 12 12 | 0 free
+Rank 16: neighbours full, reported congestion to base station
+Rank 3: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 16: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 6 | 2026 10 19 01 12 12 | 0 free
+Rank 14 | 2026 10 19 01 12 12 | 0 free
+Rank 17 | 2026 10 19 01 12 12 | 0 free
+Rank 6: neighbours full, reported congestion to base station
+Rank 14: neighbours full, reported congestion to base station
+Rank 6: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 17: neighbours full, reported congestion to base station
+Rank 14: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 4 | 2026 10 19 01 12 12 | 0 free
+Rank 4: neighbours full, reported congestion to base station
+Rank 17: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 4: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 13 | 2026 10 19 01 12 12 | 0 free
+Rank 20 | 2026 10 19 01 12 12 | 0 free
+Rank 20: neighbours full, reported congestion to base station
+Rank 13: neighbours full, reported congestion to base station
+Rank 5 | 2026 10 19 01 12 12 | 0 free
+Rank 20: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 13: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 0 | 2026 10 19 01 12 12 | 0 free
+Rank 10 | 2026 10 19 01 12 12 | 0 free
+Rank 0: neighbours full, reported congestion to base station
+Rank 5: neighbours full, reported congestion to base station
+Rank 21 | 2026 10 19 01 12 12 | 0 free
+Rank 0: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 7 | 2026 10 19 01 12 12 | 0 free
+Rank 7: neighbours full, reported congestion to base station
+Rank 10: neighbours full, reported congestion to base station
+Rank 10: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 5: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 23 | 2026 10 19 01 12 12 | 0 free
+Rank 24 | 2026 10 19 01 12 12 | 0 free
+Rank 21: neighbours full, reported congestion to base station
+Rank 21: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 12 | 2026 10 19 01 12 12 | 0 free
+Rank 7: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 12: neighbours full, reported congestion to base station
+Rank 12: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 8 | 2026 10 19 01 12 12 | 0 free
+Rank 11 | 2026 10 19 01 12 12 | 0 free
+Rank 8: neighbours full, reported congestion to base station
+Rank 24: neighbours full, reported congestion to base station
+Rank 8: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 23: neighbours full, reported congestion to base station
+Rank 24: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 11: neighbours full, reported congestion to base station
+Rank 11: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 23: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 22 | 2026 10 19 01 12 12 | 0 free
+Rank 15 | 2026 10 19 01 12 12 | 0 free
+Rank 15: neighbours full, reported congestion to base station
+Rank 22: neighbours full, reported congestion to base station
+Rank 15: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 22: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 1 | 2026 10 19 01 12 15 | 0 free
+Rank 1: neighbours full, reported congestion to base station
+Rank 1: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 2 | 2026 10 19 01 12 15 | 0 free
+Rank 19 | 2026 10 19 01 12 15 | 0 free
+Rank 2: neighbours full, reported congestion to base station
+Rank 19: neighbours full, reported congestion to base station
+Rank 2: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 19: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 9 | 2026 10 19 01 12 15 | 0 free
+Rank 18 | 2026 10 19 01 12 15 | 0 free
+Rank 9: neighbours full, reported congestion to base station
+Rank 18: neighbours full, reported congestion to base station
+Rank 9: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 18: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 3 | 2026 10 19 01 12 15 | 0 free
+Rank 3: neighbours full, reported congestion to base station
+Rank 3: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 16 | 2026 10 19 01 12 15 | 0 free
+Rank 6 | 2026 10 19 01 12 15 | 0 free
+Rank 16: neighbours full, reported congestion to base station
+Rank 6: neighbours full, reported congestion to base station
+Rank 17 | 2026 10 19 01 12 15 | 0 free
+Rank 14 | 2026 10 19 01 12 15 | 0 free
+Rank 6: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 16: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 14: neighbours full, reported congestion to base station
+Rank 17: neighbours full, reported congestion to base station
+Rank 14: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 17: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 4 | 2026 10 19 01 12 15 | 0 free
+Rank 4: neighbours full, reported congestion to base station
+Rank 4: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 13 | 2026 10 19 01 12 15 | 0 free
+Rank 13: neighbours full, reported congestion to base station
+Rank 13: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 20 | 2026 10 19 01 12 15 | 0 free
+Rank 20: neighbours full, reported congestion to base station
+Rank 20: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 5 | 2026 10 19 01 12 15 | 0 free
+Rank 5: neighbours full, reported congestion to base station
+Rank 5: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 10 | 2026 10 19 01 12 15 | 0 free
+Rank 0 | 2026 10 19 01 12 15 | 0 free
+Rank 10: neighbours full, reported congestion to base station
+Rank 0: neighbours full, reported congestion to base station
+Rank 10: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 0: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 21 | 2026 10 19 01 12 15 | 0 free
+Rank 21: neighbours full, reported congestion to base station
+Rank 21: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 7 | 2026 10 19 01 12 15 | 0 free
+Rank 7: neighbours full, reported congestion to base station
+Rank 7: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 12 | 2026 10 19 01 12 15 | 0 free
+Rank 24 | 2026 10 19 01 12 15 | 0 free
+Rank 23 | 2026 10 19 01 12 15 | 0 free
+Rank 24: neighbours full, reported congestion to base station
+Rank 23: neighbours full, reported congestion to base station
+Rank 12: neighbours full, reported congestion to base station
+Rank 11 | 2026 10 19 01 12 15 | 0 free
+Rank 23: base station (rank 25) reports no available capacity, delay=0.02 seconds
+Rank 8 | 2026 10 19 01 12 15 | 0 free
+Rank 11: neighbours full, reported congestion to base station
+Rank 24: base station (rank 25) reports no available capacity, delay=0.02 seconds
+Rank 11: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 12: base station (rank 25) reports no available capacity, delay=0.02 seconds
+Rank 8: neighbours full, reported congestion to base station
+Rank 8: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 22 | 2026 10 19 01 12 15 | 0 free
+Rank 15 | 2026 10 19 01 12 15 | 0 free
+Rank 15: neighbours full, reported congestion to base station
+Rank 22: neighbours full, reported congestion to base station
+Rank 15: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 22: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 1 | 2026 10 19 01 12 18 | 0 free
+Rank 1: neighbours full, reported congestion to base station
+Rank 1: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 2 | 2026 10 19 01 12 18 | 0 free
+Rank 2: neighbours full, reported congestion to base station
+Rank 2: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 19 | 2026 10 19 01 12 18 | 0 free
+Rank 19: neighbours full, reported congestion to base station
+Rank 19: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 9 | 2026 10 19 01 12 18 | 0 free
+Rank 18 | 2026 10 19 01 12 18 | 0 free
+Rank 9: neighbours full, reported congestion to base station
+Rank 9: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 18: neighbours full, reported congestion to base station
+Rank 18: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 3 | 2026 10 19 01 12 18 | 0 free
+Rank 3: neighbours full, reported congestion to base station
+Rank 16 | 2026 10 19 01 12 18 | 0 free
+Rank 16: neighbours full, reported congestion to base station
+Rank 3: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 16: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 6 | 2026 10 19 01 12 18 | 0 free
+Rank 6: neighbours full, reported congestion to base station
+Rank 6: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 14 | 2026 10 19 01 12 18 | 0 free
+Rank 17 | 2026 10 19 01 12 18 | 0 free
+Rank 14: neighbours full, reported congestion to base station
+Rank 17: neighbours full, reported congestion to base station
+Rank 4 | 2026 10 19 01 12 18 | 0 free
+Rank 14: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 17: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 4: neighbours full, reported congestion to base station
+Rank 13 | 2026 10 19 01 12 18 | 0 free
+Rank 13: neighbours full, reported congestion to base station
+Rank 4: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 13: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 20 | 2026 10 19 01 12 18 | 0 free
+Rank 20: neighbours full, reported congestion to base station
+Rank 20: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 5 | 2026 10 19 01 12 18 | 0 free
+Rank 10 | 2026 10 19 01 12 18 | 0 free
+Rank 10: neighbours full, reported congestion to base station
+Rank 10: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 0 | 2026 10 19 01 12 18 | 0 free
+Rank 5: neighbours full, reported congestion to base station
+Rank 5: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 0: neighbours full, reported congestion to base station
+Rank 21 | 2026 10 19 01 12 18 | 0 free
+Rank 7 | 2026 10 19 01 12 18 | 0 free
+Rank 7: neighbours full, reported congestion to base station
+Rank 0: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 7: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 21: neighbours full, reported congestion to base station
+Rank 21: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 12 | 2026 10 19 01 12 18 | 0 free
+Rank 24 | 2026 10 19 01 12 18 | 0 free
+Rank 23 | 2026 10 19 01 12 18 | 0 free
+Rank 23: neighbours full, reported congestion to base station
+Rank 23: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 11 | 2026 10 19 01 12 18 | 0 free
+Rank 24: neighbours full, reported congestion to base station
+Rank 12: neighbours full, reported congestion to base station
+Rank 24: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 12: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 8 | 2026 10 19 01 12 18 | 0 free
+Rank 11: neighbours full, reported congestion to base station
+Rank 8: neighbours full, reported congestion to base station
+Rank 11: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 8: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 15 | 2026 10 19 01 12 18 | 0 free
+Rank 22 | 2026 10 19 01 12 18 | 0 free
+Rank 22: neighbours full, reported congestion to base station
+Rank 15: neighbours full, reported congestion to base station
+Rank 15: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 22: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 1 | 2026 10 19 01 12 21 | 0 free
+Rank 1: neighbours full, reported congestion to base station
+Rank 1: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 2 | 2026 10 19 01 12 21 | 0 free
+Rank 2: neighbours full, reported congestion to base station
+Rank 2: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 19 | 2026 10 19 01 12 21 | 0 free
+Rank 19: neighbours full, reported congestion to base station
+Rank 19: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 9 | 2026 10 19 01 12 21 | 0 free
+Rank 9: neighbours full, reported congestion to base station
+Rank 9: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 18 | 2026 10 19 01 12 21 | 0 free
+Rank 18: neighbours full, reported congestion to base station
+Rank 18: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 3 | 2026 10 19 01 12 21 | 0 free
+Rank 3: neighbours full, reported congestion to base station
+Rank 3: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 16 | 2026 10 19 01 12 21 | 0 free
+Rank 6 | 2026 10 19 01 12 21 | 0 free
+Rank 6: neighbours full, reported congestion to base station
+Rank 6: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 16: neighbours full, reported congestion to base station
+Rank 16: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 14 | 2026 10 19 01 12 21 | 0 free
+Rank 14: neighbours full, reported congestion to base station
+Rank 14: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 17 | 2026 10 19 01 12 21 | 0 free
+Rank 17: neighbours full, reported congestion to base station
+Rank 17: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 4 | 2026 10 19 01 12 21 | 0 free
+Rank 4: neighbours full, reported congestion to base station
+Rank 4: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 13 | 2026 10 19 01 12 21 | 0 free
+Rank 13: neighbours full, reported congestion to base station
+Rank 20 | 2026 10 19 01 12 21 | 0 free
+Rank 13: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 20: neighbours full, reported congestion to base station
+Rank 20: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 5 | 2026 10 19 01 12 21 | 0 free
+Rank 10 | 2026 10 19 01 12 21 | 0 free
+Rank 10: neighbours full, reported congestion to base station
+Rank 0 | 2026 10 19 01 12 21 | 0 free
+Rank 10: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 21 | 2026 10 19 01 12 21 | 0 free
+Rank 5: neighbours full, reported congestion to base station
+Rank 0: neighbours full, reported congestion to base station
+Rank 7 | 2026 10 19 01 12 21 | 0 free
+Rank 0: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 21: neighbours full, reported congestion to base station
+Rank 5: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 21: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 7: neighbours full, reported congestion to base station
+Rank 7: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 12 | 2026 10 19 01 12 21 | 0 free
+Rank 12: neighbours full, reported congestion to base station
+Rank 12: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 23 | 2026 10 19 01 12 21 | 0 free
+Rank 24 | 2026 10 19 01 12 21 | 0 free
+Rank 24: neighbours full, reported congestion to base station
+Rank 23: neighbours full, reported congestion to base station
+Rank 11 | 2026 10 19 01 12 21 | 0 free
+Rank 23: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 24: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 8 | 2026 10 19 01 12 21 | 0 free
+Rank 8: neighbours full, reported congestion to base station
+Rank 8: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 11: neighbours full, reported congestion to base station
+Rank 11: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 15 | 2026 10 19 01 12 21 | 0 free
+Rank 15: neighbours full, reported congestion to base station
+Rank 22 | 2026 10 19 01 12 21 | 0 free
+Rank 22: neighbours full, reported congestion to base station
+Rank 15: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 22: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 1 | 2026 10 19 01 12 24 | 0 free
+Rank 1: neighbours full, reported congestion to base station
+Rank 1: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 2 | 2026 10 19 01 12 24 | 0 free
+Rank 2: neighbours full, reported congestion to base station
+Rank 2: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 19 | 2026 10 19 01 12 24 | 0 free
+Rank 19: neighbours full, reported congestion to base station
+Rank 19: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 9 | 2026 10 19 01 12 24 | 0 free
+Rank 18 | 2026 10 19 01 12 24 | 0 free
+Rank 3 | 2026 10 19 01 12 24 | 0 free
+Rank 9: neighbours full, reported congestion to base station
+Rank 3: neighbours full, reported congestion to base station
+Rank 18: neighbours full, reported congestion to base station
+Rank 16 | 2026 10 19 01 12 24 | 0 free
+Rank 18: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 3: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 9: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 16: neighbours full, reported congestion to base station
+Rank 16: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 6 | 2026 10 19 01 12 24 | 0 free
+Rank 6: neighbours full, reported congestion to base station
+Rank 6: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 14 | 2026 10 19 01 12 24 | 0 free
+Rank 14: neighbours full, reported congestion to base station
+Rank 17 | 2026 10 19 01 12 24 | 0 free
+Rank 14: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 17: neighbours full, reported congestion to base station
+Rank 4 | 2026 10 19 01 12 24 | 0 free
+Rank 17: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 13 | 2026 10 19 01 12 24 | 0 free
+Rank 4: neighbours full, reported congestion to base station
+Rank 13: neighbours full, reported congestion to base station
+Rank 4: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 13: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 20 | 2026 10 19 01 12 24 | 0 free
+Rank 20: neighbours full, reported congestion to base station
+Rank 20: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 10 | 2026 10 19 01 12 24 | 0 free
+Rank 5 | 2026 10 19 01 12 24 | 0 free
+Rank 10: neighbours full, reported congestion to base station
+Rank 0 | 2026 10 19 01 12 24 | 0 free
+Rank 5: neighbours full, reported congestion to base station
+Rank 21 | 2026 10 19 01 12 24 | 0 free
+Rank 5: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 21: neighbours full, reported congestion to base station
+Rank 10: base station (rank 25) reports no available capacity, delay=0.02 seconds
+Rank 0: neighbours full, reported congestion to base station
+Rank 21: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 0: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 7 | 2026 10 19 01 12 24 | 0 free
+Rank 7: neighbours full, reported congestion to base station
+Rank 7: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 12 | 2026 10 19 01 12 24 | 0 free
+Rank 12: neighbours full, reported congestion to base station
+Rank 12: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 23 | 2026 10 19 01 12 24 | 0 free
+Rank 24 | 2026 10 19 01 12 24 | 0 free
+Rank 24: neighbours full, reported congestion to base station
+Rank 11 | 2026 10 19 01 12 24 | 0 free
+Rank 8 | 2026 10 19 01 12 24 | 0 free
+Rank 24: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 23: neighbours full, reported congestion to base station
+Rank 15 | 2026 10 19 01 12 24 | 0 free
+Rank 8: neighbours full, reported congestion to base station
+Rank 8: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 23: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 11: neighbours full, reported congestion to base station
+Rank 11: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 22 | 2026 10 19 01 12 24 | 0 free
+Rank 15: neighbours full, reported congestion to base station
+Rank 22: neighbours full, reported congestion to base station
+Rank 15: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 22: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 1 | 2026 10 19 01 12 27 | 0 free
+Rank 1: neighbours full, reported congestion to base station
+Rank 1: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 2 | 2026 10 19 01 12 27 | 0 free
+Rank 2: neighbours full, reported congestion to base station
+Rank 2: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 19 | 2026 10 19 01 12 27 | 0 free
+Rank 19: neighbours full, reported congestion to base station
+Rank 19: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 9 | 2026 10 19 01 12 27 | 0 free
+Rank 9: neighbours full, reported congestion to base station
+Rank 9: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 3 | 2026 10 19 01 12 27 | 0 free
+Rank 18 | 2026 10 19 01 12 27 | 0 free
+Rank 3: neighbours full, reported congestion to base station
+Rank 3: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 18: neighbours full, reported congestion to base station
+Rank 18: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 16 | 2026 10 19 01 12 27 | 0 free
+Rank 16: neighbours full, reported congestion to base station
+Rank 16: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 6 | 2026 10 19 01 12 27 | 0 free
+Rank 14 | 2026 10 19 01 12 27 | 0 free
+Rank 14: neighbours full, reported congestion to base station
+Rank 14: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 17 | 2026 10 19 01 12 27 | 0 free
+Rank 4 | 2026 10 19 01 12 27 | 0 free
+Rank 4: neighbours full, reported congestion to base station
+Rank 4: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 6: neighbours full, reported congestion to base station
+Rank 17: neighbours full, reported congestion to base station
+Rank 13 | 2026 10 19 01 12 27 | 0 free
+Rank 20 | 2026 10 19 01 12 27 | 0 free
+Rank 6: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 17: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 20: neighbours full, reported congestion to base station
+Rank 20: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 13: neighbours full, reported congestion to base station
+Rank 13: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 10 | 2026 10 19 01 12 27 | 0 free
+Rank 10: neighbours full, reported congestion to base station
+Rank 10: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 5 | 2026 10 19 01 12 27 | 0 free
+Rank 5: neighbours full, reported congestion to base station
+Rank 5: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 21 | 2026 10 19 01 12 27 | 0 free
+Rank 0 | 2026 10 19 01 12 27 | 0 free
+Rank 7 | 2026 10 19 01 12 27 | 0 free
+Rank 0: neighbours full, reported congestion to base station
+Rank 21: neighbours full, reported congestion to base station
+Rank 0: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 21: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 23 | 2026 10 19 01 12 27 | 0 free
+Rank 7: neighbours full, reported congestion to base station
+Rank 12 | 2026 10 19 01 12 27 | 0 free
+Rank 23: neighbours full, reported congestion to base station
+Rank 24 | 2026 10 19 01 12 27 | 0 free
+Rank 12: neighbours full, reported congestion to base station
+Rank 23: base station (rank 25) reports no available capacity, delay=0.01 seconds
+Rank 7: base station (rank 25) reports no available capacity, delay=0.02 seconds
+Rank 12: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 24: neighbours full, reported congestion to base station
+Rank 24: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 8 | 2026 10 19 01 12 27 | 0 free
+Rank 11 | 2026 10 19 01 12 27 | 0 free
+Rank 8: neighbours full, reported congestion to base station
+Rank 15 | 2026 10 19 01 12 27 | 0 free
+Rank 8: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 15: neighbours full, reported congestion to base station
+Rank 15: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 22 | 2026 10 19 01 12 27 | 0 free
+Rank 11: neighbours full, reported congestion to base station
+Rank 11: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 22: neighbours full, reported congestion to base station
+Rank 22: base station (rank 25) reports no available capacity, delay=0.00 seconds
+Rank 6: termination received, shutting down
+Rank 5: termination received, shutting down
+Rank 19: termination received, shutting down
+Rank 7: termination received, shutting down
+Rank 4: termination received, shutting down
+Rank 10: termination received, shutting down
+Rank 24: termination received, shutting down
+Rank 2: termination received, shutting down
+Rank 22: termination received, shutting down
+Rank 12: termination received, shutting down
+Rank 23: termination received, shutting down
+Rank 0: termination received, shutting down
+Rank 18: termination received, shutting down
+Rank 20: termination received, shutting down
+Rank 16: termination received, shutting down
+Rank 14: termination received, shutting down
+Rank 1: termination received, shutting down
+Rank 11: termination received, shutting down
+Rank 15: termination received, shutting down
+Rank 17: termination received, shutting down
+Rank 13: termination received, shutting down
+Rank 3: termination received, shutting down
+Rank 9: termination received, shutting down
+Rank 8: termination received, shutting down
+Rank 21: termination received, shutting down

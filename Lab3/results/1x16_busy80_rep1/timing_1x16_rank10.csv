@@ -1,0 +1,4 @@
+type,rank,peer,seconds,bytes,epoch
+status_rtt,10,9,0.005562,8,1792333030
+status_rtt,10,11,0.005607,8,1792333030
+exchange,10,-1,0.005612,16,1792333030

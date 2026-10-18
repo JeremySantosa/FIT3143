@@ -7,7 +7,6 @@
 #include "common.h"
 
 #define K 6 // Ports per node
-#define cycle_seconds 10 // duration of each cycle in seconds
 
 // task 2
 int run_base_station(int rows, int cols, double simulation_seconds, double report_window_seconds, const char *log_path);
@@ -16,7 +15,7 @@ static FILE *timing_log = NULL; // timing log file pointer per node
 static int base_rank = 0;       // world rank of the base station
 
 void log_time(const char *type, int wrank, int peer, double seconds, int bytes) {
-    if (timing_log) fprintf(timing_log, "%s,%d,%d,%.6f,%d\n", type, wrank, peer, seconds, bytes);
+    if (timing_log) fprintf(timing_log, "%s,%d,%d,%.6f,%d,%ld\n", type, wrank, peer, seconds, bytes, (long)time(NULL));
 }
 
 // this helper function answers incoming port requests from other nodes
@@ -140,6 +139,9 @@ int main(int argc, char *argv[]){
     int wrank, wsize, m = argc > 2 ? atoi(argv[1]) : 3, n = argc > 2 ? atoi(argv[2]) : 3;
     double sim_seconds = argc > 3 ? atof(argv[3]) : DEFAULT_SIMULATION_TIME;
     double window_seconds = argc > 4 ? atof(argv[4]) : DEFAULT_TIME_WINDOW;
+    int busy_pct = argc > 5 ? atoi(argv[5]) : 80;      // % chance a port is busy
+    unsigned rep = argc > 6 ? atoi(argv[6]) : 0;       // run number, changes the seed
+    double cycle_seconds = window_seconds;
     MPI_Comm_rank(MPI_COMM_WORLD, &wrank);
     MPI_Comm_size(MPI_COMM_WORLD, &wsize);
     base_rank = wsize - 1;
@@ -178,7 +180,7 @@ int main(int argc, char *argv[]){
         char logname[64];
         snprintf(logname, sizeof(logname), "timing_%dx%d_rank%d.csv", m, n, wrank);
         timing_log = fopen(logname, "w");
-        if (timing_log) fprintf(timing_log, "type,rank,peer,seconds,bytes\n");
+        if (timing_log) fprintf(timing_log, "type,rank,peer,seconds,bytes,epoch\n");
         else fprintf(stderr, "Rank %d: could not open %s, continuing without timing log\n", wrank, logname);
 
         int ports[K] = {0}; // 0 is free, 1 if in use
@@ -187,9 +189,9 @@ int main(int argc, char *argv[]){
         #pragma omp parallel num_threads(K) // pragma is used because each port can be handled by a separate thread {}
         {
             int p = omp_get_thread_num();
-            unsigned seed = wrank * 100 + p; // this generates a unique seed for each thread
+            unsigned seed = wrank * 100 + p + rep * 10000; // this generates a unique seed for each thread
             for (int c = 0; !done; c++) {
-                ports[p] = rand_r(&seed) % 10 < 8; // this simulates an 80% chance that it's busy, so congestion happens in tests
+                ports[p] = rand_r(&seed) % 100 < busy_pct; // this simulates the probability that the port is busy
                 #pragma omp barrier 
                 #pragma omp master
                 {

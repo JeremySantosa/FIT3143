@@ -1,0 +1,16 @@
+type,rank,peer,seconds,bytes
+status_rtt,6,3,0.067475,8
+status_rtt,6,7,0.068330,8
+exchange,6,-1,0.068358,16
+report_send,6,9,0.000022,72
+report_rtt,6,9,0.022312,1104
+status_rtt,6,3,0.007364,8
+status_rtt,6,7,0.008041,8
+exchange,6,-1,0.008051,16
+report_send,6,9,0.000002,72
+report_rtt,6,9,0.005623,1104
+status_rtt,6,7,0.004337,8
+status_rtt,6,3,0.004359,8
+exchange,6,-1,0.004359,16
+report_send,6,9,0.000002,72
+report_rtt,6,9,0.003973,1104

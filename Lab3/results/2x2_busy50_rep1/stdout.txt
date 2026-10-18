@@ -1,0 +1,50 @@
+Rank 2 (1,0) neighbours=2: 0 3
+Rank 3 (1,1) neighbours=2: 1 2
+Rank 0 (0,0) neighbours=2: 2 1
+Rank 1 (0,1) neighbours=2: 3 0
+Base station rank 4 running for 30.0 s, grid 2x2
+Rank 1 | 2026 10 19 01 04 17 | 4 free
+Rank 2 | 2026 10 19 01 04 17 | 3 free
+Rank 0 | 2026 10 19 01 04 17 | 2 free
+Rank 3 | 2026 10 19 01 04 17 | 2 free
+Rank 1 | 2026 10 19 01 04 20 | 4 free
+Rank 0 | 2026 10 19 01 04 20 | 5 free
+Rank 2 | 2026 10 19 01 04 20 | 4 free
+Rank 3 | 2026 10 19 01 04 20 | 3 free
+Rank 1 | 2026 10 19 01 04 23 | 3 free
+Rank 0 | 2026 10 19 01 04 23 | 3 free
+Rank 2 | 2026 10 19 01 04 23 | 3 free
+Rank 3 | 2026 10 19 01 04 23 | 3 free
+Rank 1 | 2026 10 19 01 04 26 | 6 free
+Rank 0 | 2026 10 19 01 04 26 | 1 free
+Rank 2 | 2026 10 19 01 04 26 | 5 free
+Rank 3 | 2026 10 19 01 04 26 | 2 free
+Rank 1 | 2026 10 19 01 04 29 | 5 free
+Rank 0 | 2026 10 19 01 04 29 | 4 free
+Rank 2 | 2026 10 19 01 04 29 | 2 free
+Rank 3 | 2026 10 19 01 04 29 | 3 free
+Rank 1 | 2026 10 19 01 04 32 | 2 free
+Rank 0 | 2026 10 19 01 04 32 | 2 free
+Rank 2 | 2026 10 19 01 04 32 | 4 free
+Rank 3 | 2026 10 19 01 04 32 | 4 free
+Rank 1 | 2026 10 19 01 04 35 | 2 free
+Rank 0 | 2026 10 19 01 04 35 | 1 free
+Rank 2 | 2026 10 19 01 04 35 | 3 free
+Rank 3 | 2026 10 19 01 04 35 | 4 free
+Rank 1 | 2026 10 19 01 04 38 | 4 free
+Rank 0 | 2026 10 19 01 04 38 | 2 free
+Rank 2 | 2026 10 19 01 04 38 | 4 free
+Rank 3 | 2026 10 19 01 04 38 | 3 free
+Rank 1 | 2026 10 19 01 04 41 | 2 free
+Rank 0 | 2026 10 19 01 04 41 | 5 free
+Rank 2 | 2026 10 19 01 04 41 | 4 free
+Rank 3 | 2026 10 19 01 04 41 | 0 free
+Rank 3: redirecting EVs to neighbour 2 (4 free)
+Rank 1 | 2026 10 19 01 04 44 | 2 free
+Rank 0 | 2026 10 19 01 04 44 | 3 free
+Rank 2 | 2026 10 19 01 04 44 | 4 free
+Rank 3 | 2026 10 19 01 04 44 | 4 free
+Rank 1: termination received, shutting down
+Rank 0: termination received, shutting down
+Rank 2: termination received, shutting down
+Rank 3: termination received, shutting down

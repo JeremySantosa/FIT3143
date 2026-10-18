@@ -1,0 +1,42 @@
+simulation_seconds=30.000 window_seconds=3.000 grid=1x4
+t=0.038887 sender=0 xy=(0,0) ports=0 incident_timestamp=1792332843 neighbours=1 neighbour_messages=2 neighbour_bytes=8 candidates=1 2
+t=0.063172 sender=1 xy=(0,1) ports=0 incident_timestamp=1792332843 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=1 3
+t=0.064079 sender=2 xy=(0,2) ports=0 incident_timestamp=1792332843 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=0
+t=0.064870 sender=3 xy=(0,3) ports=0 incident_timestamp=1792332843 neighbours=1 neighbour_messages=2 neighbour_bytes=8 candidates=0
+t=3.023519 sender=1 xy=(0,1) ports=0 incident_timestamp=1792332846 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=0
+t=3.039428 sender=0 xy=(0,0) ports=0 incident_timestamp=1792332846 neighbours=1 neighbour_messages=2 neighbour_bytes=8 candidates=0
+t=3.054675 sender=3 xy=(0,3) ports=0 incident_timestamp=1792332846 neighbours=1 neighbour_messages=2 neighbour_bytes=8 candidates=0
+t=3.066627 sender=2 xy=(0,2) ports=0 incident_timestamp=1792332846 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=0
+t=6.021380 sender=1 xy=(0,1) ports=0 incident_timestamp=1792332849 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=0
+t=6.042920 sender=0 xy=(0,0) ports=0 incident_timestamp=1792332849 neighbours=1 neighbour_messages=2 neighbour_bytes=8 candidates=0
+t=6.080980 sender=2 xy=(0,2) ports=0 incident_timestamp=1792332849 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=0
+t=6.093607 sender=3 xy=(0,3) ports=0 incident_timestamp=1792332849 neighbours=1 neighbour_messages=2 neighbour_bytes=8 candidates=0
+t=9.035179 sender=1 xy=(0,1) ports=0 incident_timestamp=1792332852 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=0
+t=9.043489 sender=0 xy=(0,0) ports=0 incident_timestamp=1792332852 neighbours=1 neighbour_messages=2 neighbour_bytes=8 candidates=0
+t=9.060251 sender=3 xy=(0,3) ports=0 incident_timestamp=1792332852 neighbours=1 neighbour_messages=2 neighbour_bytes=8 candidates=0
+t=9.068631 sender=2 xy=(0,2) ports=0 incident_timestamp=1792332852 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=0
+t=12.040407 sender=1 xy=(0,1) ports=0 incident_timestamp=1792332855 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=0
+t=12.047573 sender=0 xy=(0,0) ports=0 incident_timestamp=1792332855 neighbours=1 neighbour_messages=2 neighbour_bytes=8 candidates=0
+t=12.060669 sender=3 xy=(0,3) ports=0 incident_timestamp=1792332855 neighbours=1 neighbour_messages=2 neighbour_bytes=8 candidates=0
+t=12.074752 sender=2 xy=(0,2) ports=0 incident_timestamp=1792332855 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=0
+t=15.040456 sender=1 xy=(0,1) ports=0 incident_timestamp=1792332858 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=0
+t=15.054928 sender=0 xy=(0,0) ports=0 incident_timestamp=1792332858 neighbours=1 neighbour_messages=2 neighbour_bytes=8 candidates=0
+t=15.082281 sender=3 xy=(0,3) ports=0 incident_timestamp=1792332858 neighbours=1 neighbour_messages=2 neighbour_bytes=8 candidates=0
+t=15.083402 sender=2 xy=(0,2) ports=0 incident_timestamp=1792332858 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=0
+t=18.044964 sender=1 xy=(0,1) ports=0 incident_timestamp=1792332861 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=0
+t=18.055099 sender=0 xy=(0,0) ports=0 incident_timestamp=1792332861 neighbours=1 neighbour_messages=2 neighbour_bytes=8 candidates=0
+t=18.074888 sender=3 xy=(0,3) ports=0 incident_timestamp=1792332861 neighbours=1 neighbour_messages=2 neighbour_bytes=8 candidates=0
+t=18.082228 sender=2 xy=(0,2) ports=0 incident_timestamp=1792332861 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=0
+t=21.063245 sender=1 xy=(0,1) ports=0 incident_timestamp=1792332864 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=0
+t=21.064239 sender=0 xy=(0,0) ports=0 incident_timestamp=1792332864 neighbours=1 neighbour_messages=2 neighbour_bytes=8 candidates=0
+t=21.074988 sender=3 xy=(0,3) ports=0 incident_timestamp=1792332864 neighbours=1 neighbour_messages=2 neighbour_bytes=8 candidates=0
+t=21.086702 sender=2 xy=(0,2) ports=0 incident_timestamp=1792332864 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=0
+t=24.070552 sender=0 xy=(0,0) ports=0 incident_timestamp=1792332867 neighbours=1 neighbour_messages=2 neighbour_bytes=8 candidates=0
+t=24.071862 sender=1 xy=(0,1) ports=0 incident_timestamp=1792332867 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=0
+t=24.082681 sender=3 xy=(0,3) ports=0 incident_timestamp=1792332867 neighbours=1 neighbour_messages=2 neighbour_bytes=8 candidates=0
+t=24.094717 sender=2 xy=(0,2) ports=0 incident_timestamp=1792332867 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=0
+t=27.067450 sender=1 xy=(0,1) ports=0 incident_timestamp=1792332870 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=0
+t=27.078807 sender=0 xy=(0,0) ports=0 incident_timestamp=1792332870 neighbours=1 neighbour_messages=2 neighbour_bytes=8 candidates=0
+t=27.086977 sender=3 xy=(0,3) ports=0 incident_timestamp=1792332870 neighbours=1 neighbour_messages=2 neighbour_bytes=8 candidates=0
+t=27.098292 sender=2 xy=(0,2) ports=0 incident_timestamp=1792332870 neighbours=2 neighbour_messages=4 neighbour_bytes=16 candidates=0
+summary elapsed_seconds=30.000015 alerts=40 inbound_reports=40 outbound_messages=44 total_base_messages=84

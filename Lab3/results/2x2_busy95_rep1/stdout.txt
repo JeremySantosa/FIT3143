@@ -1,0 +1,100 @@
+Rank 3 (1,1) neighbours=2: 1 2
+Rank 0 (0,0) neighbours=2: 2 1
+Rank 1 (0,1) neighbours=2: 3 0
+Rank 2 (1,0) neighbours=2: 0 3
+Base station rank 4 running for 30.0 s, grid 2x2
+Rank 2 | 2026 10 19 01 05 18 | 0 free
+Rank 1 | 2026 10 19 01 05 18 | 2 free
+Rank 0 | 2026 10 19 01 05 18 | 0 free
+Rank 0: redirecting EVs to neighbour 1 (2 free)
+Rank 3 | 2026 10 19 01 05 18 | 0 free
+Rank 3: redirecting EVs to neighbour 1 (2 free)
+Rank 2: neighbours full, reported congestion to base station
+Rank 2: forwarding EVs to nodes: 1  (reply took 0.0018 s) 
+Rank 2 | 2026 10 19 01 05 21 | 0 free
+Rank 3 | 2026 10 19 01 05 21 | 1 free
+Rank 2: neighbours full, reported congestion to base station
+Rank 0 | 2026 10 19 01 05 21 | 0 free
+Rank 0: redirecting EVs to neighbour 1 (1 free)
+Rank 1 | 2026 10 19 01 05 21 | 1 free
+Rank 2: forwarding EVs to nodes: 1  (reply took 0.0565 s) 
+Rank 2 | 2026 10 19 01 05 24 | 0 free
+Rank 2: redirecting EVs to neighbour 3 (1 free)
+Rank 1 | 2026 10 19 01 05 24 | 0 free
+Rank 1: redirecting EVs to neighbour 3 (1 free)
+Rank 0 | 2026 10 19 01 05 24 | 0 free
+Rank 0: neighbours full, reported congestion to base station
+Rank 0: forwarding EVs to nodes: 3  (reply took 0.0009 s) 
+Rank 3 | 2026 10 19 01 05 24 | 1 free
+Rank 2 | 2026 10 19 01 05 27 | 0 free
+Rank 2: redirecting EVs to neighbour 3 (1 free)
+Rank 1 | 2026 10 19 01 05 27 | 1 free
+Rank 0 | 2026 10 19 01 05 27 | 0 free
+Rank 0: redirecting EVs to neighbour 1 (1 free)
+Rank 3 | 2026 10 19 01 05 27 | 0 free
+Rank 3: redirecting EVs to neighbour 1 (1 free)
+Rank 2 | 2026 10 19 01 05 30 | 0 free
+Rank 2: neighbours full, reported congestion to base station
+Rank 2: forwarding EVs to nodes: 1  (reply took 0.0070 s) 
+Rank 1 | 2026 10 19 01 05 30 | 0 free
+Rank 1: neighbours full, reported congestion to base station
+Rank 1: base station (rank 4) reports no available capacity, delay=0.01 seconds
+Rank 0 | 2026 10 19 01 05 30 | 0 free
+Rank 0: neighbours full, reported congestion to base station
+Rank 0: base station (rank 4) reports no available capacity, delay=0.00 seconds
+Rank 3 | 2026 10 19 01 05 30 | 0 free
+Rank 3: neighbours full, reported congestion to base station
+Rank 3: base station (rank 4) reports no available capacity, delay=0.00 seconds
+Rank 2 | 2026 10 19 01 05 33 | 0 free
+Rank 2: neighbours full, reported congestion to base station
+Rank 2: base station (rank 4) reports no available capacity, delay=0.01 seconds
+Rank 1 | 2026 10 19 01 05 33 | 0 free
+Rank 1: neighbours full, reported congestion to base station
+Rank 1: base station (rank 4) reports no available capacity, delay=0.01 seconds
+Rank 0 | 2026 10 19 01 05 33 | 1 free
+Rank 3 | 2026 10 19 01 05 33 | 0 free
+Rank 3: neighbours full, reported congestion to base station
+Rank 3: base station (rank 4) reports no available capacity, delay=0.00 seconds
+Rank 2 | 2026 10 19 01 05 36 | 0 free
+Rank 2: redirecting EVs to neighbour 0 (1 free)
+Rank 1 | 2026 10 19 01 05 36 | 0 free
+Rank 1: redirecting EVs to neighbour 0 (1 free)
+Rank 0 | 2026 10 19 01 05 36 | 0 free
+Rank 0: neighbours full, reported congestion to base station
+Rank 0: base station (rank 4) reports no available capacity, delay=0.00 seconds
+Rank 3 | 2026 10 19 01 05 36 | 0 free
+Rank 3: neighbours full, reported congestion to base station
+Rank 3: base station (rank 4) reports no available capacity, delay=0.00 seconds
+Rank 2 | 2026 10 19 01 05 39 | 0 free
+Rank 2: neighbours full, reported congestion to base station
+Rank 2: base station (rank 4) reports no available capacity, delay=0.00 seconds
+Rank 1 | 2026 10 19 01 05 39 | 1 free
+Rank 0 | 2026 10 19 01 05 39 | 0 free
+Rank 0: redirecting EVs to neighbour 1 (1 free)
+Rank 3 | 2026 10 19 01 05 39 | 2 free
+Rank 2 | 2026 10 19 01 05 42 | 0 free
+Rank 2: redirecting EVs to neighbour 3 (2 free)
+Rank 1 | 2026 10 19 01 05 42 | 0 free
+Rank 1: redirecting EVs to neighbour 3 (2 free)
+Rank 0 | 2026 10 19 01 05 42 | 0 free
+Rank 0: neighbours full, reported congestion to base station
+Rank 0: forwarding EVs to nodes: 3  (reply took 0.0043 s) 
+Rank 3 | 2026 10 19 01 05 42 | 0 free
+Rank 3: neighbours full, reported congestion to base station
+Rank 3: base station (rank 4) reports no available capacity, delay=0.00 seconds
+Rank 2 | 2026 10 19 01 05 45 | 0 free
+Rank 2: neighbours full, reported congestion to base station
+Rank 2: base station (rank 4) reports no available capacity, delay=0.00 seconds
+Rank 1 | 2026 10 19 01 05 45 | 0 free
+Rank 1: neighbours full, reported congestion to base station
+Rank 1: base station (rank 4) reports no available capacity, delay=0.00 seconds
+Rank 0 | 2026 10 19 01 05 45 | 0 free
+Rank 0: neighbours full, reported congestion to base station
+Rank 0: base station (rank 4) reports no available capacity, delay=0.00 seconds
+Rank 3 | 2026 10 19 01 05 45 | 0 free
+Rank 3: neighbours full, reported congestion to base station
+Rank 3: base station (rank 4) reports no available capacity, delay=0.00 seconds
+Rank 2: termination received, shutting down
+Rank 3: termination received, shutting down
+Rank 1: termination received, shutting down
+Rank 0: termination received, shutting down

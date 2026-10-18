@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+"""Reads results/*/timing_*.csv, drops warm-up cycles, writes summary.csv and graphs.
+Usage: python3 analyse.py --win 3 [--warm 2] [--busy 80]"""
+import argparse, glob, os, re
+import pandas as pd
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+
+ap = argparse.ArgumentParser()
+ap.add_argument("--win", type=float, default=3, help="cycle length used in the runs (s)")
+ap.add_argument("--warm", type=int, default=2, help="cycles to discard at the start")
+ap.add_argument("--busy", type=int, default=80, help="busy level for the grid-vs-line graph")
+ap.add_argument("--dir", default="results")
+a = ap.parse_args()
+
+frames = []
+for d in sorted(glob.glob(os.path.join(a.dir, "*_busy*_rep*"))):
+    mt = re.match(r"(\d+)x(\d+)_busy(\d+)_rep(\d+)", os.path.basename(d))
+    if not mt:
+        continue
+    m, n, busy, rep = map(int, mt.groups())
+    parts = [pd.read_csv(f) for f in glob.glob(os.path.join(d, "timing_*_rank*.csv"))]
+    parts = [p for p in parts if len(p)]
+    if not parts:
+        continue
+    df = pd.concat(parts)
+    df = df[df.epoch >= df.epoch.min() + a.warm * a.win]   # drop MPI warm-up cycles
+    df["nodes"], df["topo"] = m * n, ("line" if m == 1 else "grid")
+    df["busy"], df["rep"], df["size"] = busy, rep, f"{m}x{n}"
+    frames.append(df)
+if not frames:
+    raise SystemExit("No timing data found. Run run_experiments.sh first.")
+data = pd.concat(frames)
+
+keys = ["topo", "size", "nodes", "busy", "type"]
+summary = (data.groupby(keys).seconds
+           .agg(count="count", mean="mean", median="median", p95=lambda s: s.quantile(.95), max="max")
+           .reset_index())
+summary["mean_ms"] = summary["mean"] * 1000
+summary.to_csv("summary.csv", index=False)
+print(summary.round(6).to_string(index=False))
+
+COL = {"grid": "#2a78d6", "line": "#eb6834"}
+TYPES = [("status_rtt", "Neighbour request/reply (status_rtt)"),
+         ("exchange", "Full neighbour exchange (exchange)"),
+         ("report_rtt", "Node-to-base round trip (report_rtt)")]
+
+# Graph 1: delay vs number of nodes, grid vs line, at one busy level
+fig, axes = plt.subplots(1, 3, figsize=(14, 4), sharex=True)
+for ax, (t, title) in zip(axes, TYPES):
+    for topo in ("grid", "line"):
+        s = summary[(summary.type == t) & (summary.busy == a.busy) & (summary.topo == topo)].sort_values("nodes")
+        ax.plot(s.nodes, s.mean_ms, marker="o", lw=2, color=COL[topo], label=topo)
+    ax.set_title(title, fontsize=10); ax.set_xlabel("Number of nodes"); ax.set_ylabel("Mean delay (ms)")
+    ax.grid(alpha=.25); ax.legend(frameon=False)
+fig.suptitle(f"Delay vs topology size, {a.busy}% of ports busy")
+fig.tight_layout(); fig.savefig("graph_size_grid_vs_line.png", dpi=150)
+
+# Graph 2: delay vs availability for each grid size
+fig, axes = plt.subplots(1, 3, figsize=(14, 4), sharex=True)
+sizes = sorted(summary[summary.topo == "grid"]["size"].unique(), key=lambda s: int(s.split("x")[0]))
+shades = ["#2a78d6", "#eb6834", "#1baf7a", "#6250d6"]
+for ax, (t, title) in zip(axes, TYPES):
+    for sz, c in zip(sizes, shades):
+        s = summary[(summary.type == t) & (summary["size"] == sz)].sort_values("busy")
+        ax.plot(s.busy, s.mean_ms, marker="o", lw=2, color=c, label=sz)
+    ax.set_title(title, fontsize=10); ax.set_xlabel("Ports busy (%)"); ax.set_ylabel("Mean delay (ms)")
+    ax.grid(alpha=.25); ax.legend(frameon=False, title="grid")
+fig.suptitle("Delay vs port availability (lower busy % = more availability)")
+fig.tight_layout(); fig.savefig("graph_delay_vs_availability.png", dpi=150)
+print("\nWrote summary.csv, graph_size_grid_vs_line.png, graph_delay_vs_availability.png")

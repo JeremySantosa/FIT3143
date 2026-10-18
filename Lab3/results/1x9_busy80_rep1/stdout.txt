@@ -1,0 +1,135 @@
+Rank 5 (0,5) neighbours=2: 4 6
+Rank 6 (0,6) neighbours=2: 5 7
+Rank 7 (0,7) neighbours=2: 6 8
+Rank 8 (0,8) neighbours=1: 7
+Rank 0 (0,0) neighbours=1: 1
+Rank 1 (0,1) neighbours=2: 0 2
+Rank 2 (0,2) neighbours=2: 1 3
+Rank 3 (0,3) neighbours=2: 2 4
+Rank 4 (0,4) neighbours=2: 3 5
+Rank 7 | 2026 10 19 01 15 04 | 0 free
+Base station rank 9 running for 30.0 s, grid 1x9
+Rank 8 | 2026 10 19 01 15 04 | 2 free
+Rank 5 | 2026 10 19 01 15 04 | 2 free
+Rank 0 | 2026 10 19 01 15 04 | 1 free
+Rank 3 | 2026 10 19 01 15 04 | 0 free
+Rank 6 | 2026 10 19 01 15 04 | 2 free
+Rank 7: redirecting EVs to neighbour 6 (2 free)
+Rank 2 | 2026 10 19 01 15 04 | 2 free
+Rank 4 | 2026 10 19 01 15 04 | 1 free
+Rank 1 | 2026 10 19 01 15 04 | 3 free
+Rank 3: redirecting EVs to neighbour 2 (2 free)
+Rank 7 | 2026 10 19 01 15 07 | 1 free
+Rank 8 | 2026 10 19 01 15 07 | 0 free
+Rank 8: redirecting EVs to neighbour 7 (1 free)
+Rank 0 | 2026 10 19 01 15 07 | 2 free
+Rank 3 | 2026 10 19 01 15 07 | 1 free
+Rank 5 | 2026 10 19 01 15 07 | 3 free
+Rank 6 | 2026 10 19 01 15 07 | 0 free
+Rank 6: redirecting EVs to neighbour 5 (3 free)
+Rank 2 | 2026 10 19 01 15 07 | 1 free
+Rank 4 | 2026 10 19 01 15 07 | 0 free
+Rank 1 | 2026 10 19 01 15 07 | 3 free
+Rank 4: redirecting EVs to neighbour 5 (3 free)
+Rank 7 | 2026 10 19 01 15 10 | 1 free
+Rank 8 | 2026 10 19 01 15 10 | 1 free
+Rank 0 | 2026 10 19 01 15 10 | 1 free
+Rank 3 | 2026 10 19 01 15 10 | 1 free
+Rank 5 | 2026 10 19 01 15 10 | 1 free
+Rank 6 | 2026 10 19 01 15 10 | 0 free
+Rank 6: redirecting EVs to neighbour 5 (1 free)
+Rank 2 | 2026 10 19 01 15 10 | 2 free
+Rank 4 | 2026 10 19 01 15 10 | 0 free
+Rank 1 | 2026 10 19 01 15 10 | 1 free
+Rank 4: redirecting EVs to neighbour 3 (1 free)
+Rank 7 | 2026 10 19 01 15 13 | 3 free
+Rank 8 | 2026 10 19 01 15 13 | 1 free
+Rank 0 | 2026 10 19 01 15 13 | 0 free
+Rank 0: redirecting EVs to neighbour 1 (1 free)
+Rank 3 | 2026 10 19 01 15 13 | 1 free
+Rank 5 | 2026 10 19 01 15 13 | 0 free
+Rank 6 | 2026 10 19 01 15 13 | 1 free
+Rank 5: redirecting EVs to neighbour 6 (1 free)
+Rank 2 | 2026 10 19 01 15 13 | 2 free
+Rank 4 | 2026 10 19 01 15 13 | 1 free
+Rank 1 | 2026 10 19 01 15 13 | 1 free
+Rank 7 | 2026 10 19 01 15 16 | 0 free
+Rank 7: redirecting EVs to neighbour 6 (1 free)
+Rank 8 | 2026 10 19 01 15 16 | 1 free
+Rank 0 | 2026 10 19 01 15 16 | 2 free
+Rank 3 | 2026 10 19 01 15 16 | 0 free
+Rank 3: redirecting EVs to neighbour 2 (2 free)
+Rank 5 | 2026 10 19 01 15 16 | 1 free
+Rank 6 | 2026 10 19 01 15 16 | 1 free
+Rank 2 | 2026 10 19 01 15 16 | 2 free
+Rank 4 | 2026 10 19 01 15 16 | 3 free
+Rank 1 | 2026 10 19 01 15 16 | 3 free
+Rank 7 | 2026 10 19 01 15 19 | 2 free
+Rank 8 | 2026 10 19 01 15 19 | 0 free
+Rank 8: redirecting EVs to neighbour 7 (2 free)
+Rank 0 | 2026 10 19 01 15 19 | 1 free
+Rank 3 | 2026 10 19 01 15 19 | 2 free
+Rank 5 | 2026 10 19 01 15 19 | 2 free
+Rank 6 | 2026 10 19 01 15 19 | 1 free
+Rank 2 | 2026 10 19 01 15 19 | 3 free
+Rank 4 | 2026 10 19 01 15 19 | 2 free
+Rank 1 | 2026 10 19 01 15 19 | 1 free
+Rank 7 | 2026 10 19 01 15 22 | 3 free
+Rank 8 | 2026 10 19 01 15 22 | 3 free
+Rank 0 | 2026 10 19 01 15 22 | 0 free
+Rank 0: redirecting EVs to neighbour 1 (1 free)
+Rank 3 | 2026 10 19 01 15 22 | 4 free
+Rank 5 | 2026 10 19 01 15 22 | 1 free
+Rank 6 | 2026 10 19 01 15 22 | 0 free
+Rank 6: redirecting EVs to neighbour 7 (3 free)
+Rank 2 | 2026 10 19 01 15 22 | 3 free
+Rank 1 | 2026 10 19 01 15 22 | 1 free
+Rank 4 | 2026 10 19 01 15 22 | 2 free
+Rank 7 | 2026 10 19 01 15 25 | 1 free
+Rank 8 | 2026 10 19 01 15 25 | 2 free
+Rank 0 | 2026 10 19 01 15 25 | 1 free
+Rank 3 | 2026 10 19 01 15 25 | 2 free
+Rank 5 | 2026 10 19 01 15 25 | 1 free
+Rank 6 | 2026 10 19 01 15 25 | 2 free
+Rank 2 | 2026 10 19 01 15 25 | 2 free
+Rank 4 | 2026 10 19 01 15 25 | 0 free
+Rank 1 | 2026 10 19 01 15 25 | 2 free
+Rank 4: redirecting EVs to neighbour 3 (2 free)
+Rank 7 | 2026 10 19 01 15 28 | 0 free
+Rank 7: redirecting EVs to neighbour 6 (2 free)
+Rank 8 | 2026 10 19 01 15 28 | 1 free
+Rank 0 | 2026 10 19 01 15 28 | 2 free
+Rank 3 | 2026 10 19 01 15 28 | 0 free
+Rank 3: redirecting EVs to neighbour 2 (2 free)
+Rank 5 | 2026 10 19 01 15 28 | 3 free
+Rank 6 | 2026 10 19 01 15 28 | 1 free
+Rank 2 | 2026 10 19 01 15 28 | 0 free
+Rank 2: redirecting EVs to neighbour 1 (2 free)
+Rank 4 | 2026 10 19 01 15 28 | 1 free
+Rank 1 | 2026 10 19 01 15 28 | 0 free
+Rank 1: redirecting EVs to neighbour 0 (2 free)
+Rank 7 | 2026 10 19 01 15 31 | 2 free
+Rank 8 | 2026 10 19 01 15 31 | 1 free
+Rank 0 | 2026 10 19 01 15 31 | 0 free
+Rank 0: neighbours full, reported congestion to base station
+Rank 0: forwarding EVs to nodes: 2  (reply took 0.0014 s) 
+Rank 3 | 2026 10 19 01 15 31 | 1 free
+Rank 5 | 2026 10 19 01 15 31 | 0 free
+Rank 5: redirecting EVs to neighbour 4 (1 free)
+Rank 6 | 2026 10 19 01 15 31 | 2 free
+Rank 2 | 2026 10 19 01 15 31 | 0 free
+Rank 2: redirecting EVs to neighbour 3 (1 free)
+Rank 4 | 2026 10 19 01 15 31 | 0 free
+Rank 1 | 2026 10 19 01 15 31 | 0 free
+Rank 1: neighbours full, reported congestion to base station
+Rank 1: forwarding EVs to nodes: 3  (reply took 0.0009 s) 
+Rank 4: redirecting EVs to neighbour 3 (1 free)
+Rank 5: termination received, shutting down
+Rank 4: termination received, shutting down
+Rank 1: termination received, shutting down
+Rank 3: termination received, shutting down
+Rank 6: termination received, shutting down
+Rank 8: termination received, shutting down
+Rank 2: termination received, shutting down
+Rank 0: termination received, shutting down
+Rank 7: termination received, shutting down
