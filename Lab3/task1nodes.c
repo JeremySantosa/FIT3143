@@ -1,3 +1,6 @@
+// Claude generated some helper code for log timing and for allowing the code to work with the generated helper scripts for summary and analyse.
+// Used due to time constraints and to quickly integrate with the analysis scripts.
+
 #include <stdio.h>
 #include <mpi.h> // MPI header
 #include <omp.h>
@@ -8,7 +11,7 @@
 
 #define K 6 // Ports per node
 
-// task 2
+// for task 2
 int run_base_station(int rows, int cols, double simulation_seconds, double report_window_seconds, const char *log_path);
 
 static FILE *timing_log = NULL; // timing log file pointer per node
@@ -24,11 +27,11 @@ void answer_requests(int free_ports, int *done) {
     MPI_Status status;
     MPI_Iprobe(MPI_ANY_SOURCE, STATUS_REQUEST_TAG, MPI_COMM_WORLD, &flag, &status);
     while (flag) {
-        MPI_Recv(buf, 1, MPI_INT, status.MPI_SOURCE, STATUS_REQUEST_TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-        MPI_Send(&free_ports, 1, MPI_INT, status.MPI_SOURCE, STATUS_REPLY_TAG, MPI_COMM_WORLD);
-        MPI_Iprobe(MPI_ANY_SOURCE, STATUS_REQUEST_TAG, MPI_COMM_WORLD, &flag, &status);
+        MPI_Recv(buf, 1, MPI_INT, status.MPI_SOURCE, STATUS_REQUEST_TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE); // receive the status request from the source node
+        MPI_Send(&free_ports, 1, MPI_INT, status.MPI_SOURCE, STATUS_REPLY_TAG, MPI_COMM_WORLD); // send the number of free ports back to the source node
+        MPI_Iprobe(MPI_ANY_SOURCE, STATUS_REQUEST_TAG, MPI_COMM_WORLD, &flag, &status); // check for more incoming status requests
     }
-    MPI_Iprobe(base_rank, TERMINATE_TAG, MPI_COMM_WORLD, &flag, &status);
+    MPI_Iprobe(base_rank, TERMINATE_TAG, MPI_COMM_WORLD, &flag, &status); // check if the base station has sent a terminate signal
     if (flag) {
         MPI_Recv(buf, sizeof(buf), MPI_BYTE, base_rank, TERMINATE_TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
         *done = 1;
@@ -40,12 +43,12 @@ void check_base_response(int wrank, double *sent_at) {
     int flag, bytes;
     MPI_Status status;
     BaseResponse response;
-    MPI_Iprobe(base_rank, RESPONSE_TAG, MPI_COMM_WORLD, &flag, &status);
-    if (!flag) return;
-    MPI_Get_count(&status, MPI_BYTE, &bytes);
-    MPI_Recv(&response, sizeof(BaseResponse), MPI_BYTE, base_rank, RESPONSE_TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+    MPI_Iprobe(base_rank, RESPONSE_TAG, MPI_COMM_WORLD, &flag, &status); // check if base station has sent a response
+    if (!flag) return; // if none...
+    MPI_Get_count(&status, MPI_BYTE, &bytes); // get the number of bytes in the incoming message
+    MPI_Recv(&response, sizeof(BaseResponse), MPI_BYTE, base_rank, RESPONSE_TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE); // receive response
     double delay = MPI_Wtime() - *sent_at;
-    log_time("report_rtt", wrank, base_rank, delay, (int)sizeof(NodeReport) + bytes);
+    log_time("report_rtt", wrank, base_rank, delay, (int)sizeof(NodeReport) + bytes); 
     if (response.available_count == 0) {
         printf("Rank %d: base station (rank %d) reports no available capacity, delay=%.2f seconds\n", wrank, base_rank, delay);
     } else {
@@ -58,9 +61,9 @@ void check_base_response(int wrank, double *sent_at) {
 
 // helper function to wait until a specific time while answering incoming port responses
 void wait_until(double end, int free_ports, int wrank, double *sent_at, int *done) {
-    while (MPI_Wtime() < end && !*done) {
-        answer_requests(free_ports, done);
-        if (*sent_at >= 0) check_base_response(wrank, sent_at);
+    while (MPI_Wtime() < end && !*done) { // wait until specified time
+        answer_requests(free_ports, done); 
+        if (*sent_at >= 0) check_base_response(wrank, sent_at); 
         usleep(100); // this reduces CPU usage by sleeping for a short while
     }
 }
@@ -69,29 +72,29 @@ void wait_until(double end, int free_ports, int wrank, double *sent_at, int *don
 void request_neighbours(NodeReport *r, int free_ports, double end, int *done) {
     MPI_Request request[MAX_NEIGHBOURS];
     MPI_Status status;
-    double sent[MAX_NEIGHBOURS], t0 = MPI_Wtime();
+    double sent[MAX_NEIGHBOURS], t0 = MPI_Wtime(); //record start time of request exchange
     int ask = 0, got = 0, flag, avail;
 
-    for (int i = 0; i < r-> neighbour_count; i++) {
+    for (int i = 0; i < r-> neighbour_count; i++) { 
         r->neighbour_availability[i] = -1;
-        sent[i] = MPI_Wtime();
-        MPI_Isend(&ask, 1, MPI_INT, r->neighbour_ranks[i], STATUS_REQUEST_TAG, MPI_COMM_WORLD, &request[i]);
+        sent[i] = MPI_Wtime(); // record time request was sent to neighbour
+        MPI_Isend(&ask, 1, MPI_INT, r->neighbour_ranks[i], STATUS_REQUEST_TAG, MPI_COMM_WORLD, &request[i]); // send status request to neighbour
     }
-    while (got < r->neighbour_count && MPI_Wtime() < end && !*done) {
-        answer_requests(free_ports, done);
-        MPI_Iprobe(MPI_ANY_SOURCE, STATUS_REPLY_TAG, MPI_COMM_WORLD, &flag, &status);
+    while (got < r->neighbour_count && MPI_Wtime() < end && !*done) { // wait for replies from all neighbours or until time runs out
+        answer_requests(free_ports, done); // handle any incoming requests while waiting
+        MPI_Iprobe(MPI_ANY_SOURCE, STATUS_REPLY_TAG, MPI_COMM_WORLD, &flag, &status); // check if any neighbour has replied
         if (!flag) { usleep(100); continue; }
-        MPI_Recv(&avail, 1, MPI_INT, status.MPI_SOURCE, STATUS_REPLY_TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+        MPI_Recv(&avail, 1, MPI_INT, status.MPI_SOURCE, STATUS_REPLY_TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE); // receive the availability from neighbour
         for (int i = 0; i < r-> neighbour_count; i++) {
             if (r->neighbour_ranks[i] == status.MPI_SOURCE) {
                 r->neighbour_availability[i] = avail;
-                log_time("status_rtt", r->node_rank, status.MPI_SOURCE, MPI_Wtime() - sent[i], 2 * (int)sizeof(int));
+                log_time("status_rtt", r->node_rank, status.MPI_SOURCE, MPI_Wtime() - sent[i], 2 * (int)sizeof(int)); // log the round-trip time for the status request
                 got++;
             }
         }
     }
-    if (got == r->neighbour_count) {
-        log_time("exchange", r->node_rank, -1, MPI_Wtime() - t0, 2 * got * (int)sizeof(int));
+    if (got == r->neighbour_count) { // when all neighbours have replied 
+        log_time("exchange", r->node_rank, -1, MPI_Wtime() - t0, 2 * got * (int)sizeof(int)); // log the total exchange time for all neighbours
     }
     MPI_Waitall(r->neighbour_count, request, MPI_STATUSES_IGNORE);
     r->message_count = r->neighbour_count + got;
@@ -100,18 +103,18 @@ void request_neighbours(NodeReport *r, int free_ports, double end, int *done) {
 
 // this helper function decides whether to redirect EVs to a neighbour or report congestion to the base station
 void decide(NodeReport *r, int wrank, double *sent_at) {
-    int best = -1;
+    int best = -1; // initialise best neighbour index
     for (int i = 0; i < r->neighbour_count; i++) {
-        if (r->neighbour_availability[i] >= DEFAULT_THRESHOLD &&
-            (best < 0 || r->neighbour_availability[i] > r->neighbour_availability[best]))
+        if (r->neighbour_availability[i] >= DEFAULT_THRESHOLD &&  
+            (best < 0 || r->neighbour_availability[i] > r->neighbour_availability[best])) // choose the neighbour with the most availability above the threshold
             best = i;
     }
     if (best >= 0) {
         printf("Rank %d: redirecting EVs to neighbour %d (%d free)\n", wrank, r->neighbour_ranks[best], r->neighbour_availability[best]);
-        return;
+        return; 
     }
-    r->timestamp = (double)time(NULL); // seconds since the epoch
-    double t = MPI_Wtime();
+    r->timestamp = (double)time(NULL); 
+    double t = MPI_Wtime(); // record start time of report send operation
     MPI_Send(r, sizeof(NodeReport), MPI_BYTE, base_rank, REPORT_TAG, MPI_COMM_WORLD);
     *sent_at = MPI_Wtime();
     log_time("report_send", wrank, base_rank, *sent_at - t, (int)sizeof(NodeReport)); // how long the send call blocked
@@ -122,11 +125,11 @@ void decide(NodeReport *r, int wrank, double *sent_at) {
 void discard_messages(void) {
     int flag, len;
     MPI_Status status;
-    MPI_Iprobe(MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &flag, &status);
+    MPI_Iprobe(MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &flag, &status); // check if there are any pending MPI messages
     while (flag) {
-        MPI_Get_count(&status, MPI_BYTE, &len);
+        MPI_Get_count(&status, MPI_BYTE, &len); // get size of incoming messages
         char *buf = malloc(len > 0 ? len : 1);
-        MPI_Recv(buf, len, MPI_BYTE, status.MPI_SOURCE, status.MPI_TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+        MPI_Recv(buf, len, MPI_BYTE, status.MPI_SOURCE, status.MPI_TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE); 
         free(buf);
         MPI_Iprobe(MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &flag, &status);
     }
@@ -134,7 +137,7 @@ void discard_messages(void) {
 
 // main function
 int main(int argc, char *argv[]){
-    int provided;
+    int provided; // provided is level of thread support by MPI 
     MPI_Init_thread(&argc, &argv, MPI_THREAD_FUNNELED, &provided);
     int wrank, wsize, m = argc > 2 ? atoi(argv[1]) : 3, n = argc > 2 ? atoi(argv[2]) : 3;
     double sim_seconds = argc > 3 ? atof(argv[3]) : DEFAULT_SIMULATION_TIME;
@@ -147,7 +150,7 @@ int main(int argc, char *argv[]){
     base_rank = wsize - 1;
 
     if (wsize != m * n + 1) {
-        if (wrank == 0) fprintf(stderr, "Need %d processes\n", m * n + 1);
+        if (wrank == 0) fprintf(stderr, "Need %d processes\n", m * n + 1); // if num. processes incorrect
         MPI_Finalize();
         return 1;
     }
@@ -157,12 +160,13 @@ int main(int argc, char *argv[]){
     MPI_Comm_split(MPI_COMM_WORLD, wrank == base_rank ? MPI_UNDEFINED : 0, wrank, &nodes);
     if (wrank == base_rank) {
         char path[64];
-        snprintf(path, sizeof(path), "base_station_%dx%d.log", m, n);
-        if (run_base_station(m, n, sim_seconds, window_seconds, path) != 0) MPI_Abort(MPI_COMM_WORLD, 1);
+        snprintf(path, sizeof(path), "base_station_%dx%d.log", m, n); // create log file name for base station
+        if (run_base_station(m, n, sim_seconds, window_seconds, path) != 0) MPI_Abort(MPI_COMM_WORLD, 1);  // abort if base station fails to run
     } else {
         int dimensions[2] = {m, n}, wraparound[2] = {0, 0}, id, xy[2], shift_res[MAX_NEIGHBOURS];
         NodeReport report = {0};
 
+        // these five lines set up a cartesian topology for grid of nodes
         MPI_Cart_create(nodes, 2, dimensions, wraparound, 0, &grid);
         MPI_Comm_rank(grid, &id);
         MPI_Cart_coords(grid, id, 2, xy);
@@ -171,18 +175,22 @@ int main(int argc, char *argv[]){
 
         report.node_rank = wrank; report.x = xy[0]; report.y = xy[1]; 
 
+        // determine number of nodes in a grid
         for (int i = 0; i < MAX_NEIGHBOURS; i++) 
             if (shift_res[i] != MPI_PROC_NULL) report.neighbour_ranks[report.neighbour_count++] = shift_res[i];
         printf("Rank %d (%d,%d) neighbours=%d:", wrank, xy[0], xy[1], report.neighbour_count);
         for (int i = 0; i < report.neighbour_count; i++) printf(" %d", report.neighbour_ranks[i]);
         printf("\n");
 
+
+        // a timing log that records timing info for each node, created by Claude
         char logname[64];
         snprintf(logname, sizeof(logname), "timing_%dx%d_rank%d.csv", m, n, wrank);
         timing_log = fopen(logname, "w");
         if (timing_log) fprintf(timing_log, "type,rank,peer,seconds,bytes,epoch\n");
         else fprintf(stderr, "Rank %d: could not open %s, continuing without timing log\n", wrank, logname);
 
+        // initialize port usage and control variables for the node
         int ports[K] = {0}; // 0 is free, 1 if in use
         int done = 0;
         double sent_at = -1;
@@ -192,7 +200,7 @@ int main(int argc, char *argv[]){
             unsigned seed = wrank * 100 + p + rep * 10000; // this generates a unique seed for each thread
             for (int c = 0; !done; c++) {
                 ports[p] = rand_r(&seed) % 100 < busy_pct; // this simulates the probability that the port is busy
-                #pragma omp barrier 
+                #pragma omp barrier  // the barrier ensures all threads have updated their port status before the master thread proceeds
                 #pragma omp master
                 {
                     double end = MPI_Wtime() + cycle_seconds;
@@ -201,13 +209,13 @@ int main(int argc, char *argv[]){
                     report.available_ports = free_ports;
 
                     time_t now = time(NULL); // same layout as Table 1 in the brief
-                    struct tm t;
-                    localtime_r(&now, &t);
+                    struct tm t; // structure to hold local time
+                    localtime_r(&now, &t); // convert current time to local time
                     printf("Rank %d | %04d %02d %02d %02d %02d %02d | %d free\n", wrank,
                            t.tm_year + 1900, t.tm_mon + 1, t.tm_mday, t.tm_hour, t.tm_min, t.tm_sec, free_ports);
 
-                    if (free_ports < DEFAULT_THRESHOLD && sent_at < 0) {
-                        request_neighbours(&report, free_ports, end, &done);
+                    if (free_ports < DEFAULT_THRESHOLD && sent_at < 0) { // if not enough free ports
+                        request_neighbours(&report, free_ports, end, &done); // request neighbours if no free ports
                         if (!done) decide(&report, wrank, &sent_at);
                     }
                     wait_until(end, free_ports, wrank, &sent_at, &done);

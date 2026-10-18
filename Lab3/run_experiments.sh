@@ -1,3 +1,5 @@
+# this is a Claude-generated helper script to run all experiments for MPI-based charging node simulation
+
 #!/usr/bin/env bash
 # Runs every topology x busy level and keeps each run's files in its own folder.
 # Usage:  ./run_experiments.sh            (needs ./sim built from t1.c + task2basestation.c)
