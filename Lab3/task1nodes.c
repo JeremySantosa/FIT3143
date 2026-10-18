@@ -9,7 +9,11 @@
 #define K 6 // Ports per node
 #define cycle_seconds 10 // duration of each cycle in seconds
 
+// task 2
+int run_base_station(int rows, int cols, double simulation_seconds, double report_window_seconds, const char *log_path);
+
 static FILE *timing_log = NULL; // timing log file pointer per node
+static int base_rank = 0;       // world rank of the base station
 
 void log_time(const char *type, int wrank, int peer, double seconds, int bytes) {
     if (timing_log) fprintf(timing_log, "%s,%d,%d,%.6f,%d\n", type, wrank, peer, seconds, bytes);
@@ -25,9 +29,9 @@ void answer_requests(int free_ports, int *done) {
         MPI_Send(&free_ports, 1, MPI_INT, status.MPI_SOURCE, STATUS_REPLY_TAG, MPI_COMM_WORLD);
         MPI_Iprobe(MPI_ANY_SOURCE, STATUS_REQUEST_TAG, MPI_COMM_WORLD, &flag, &status);
     }
-    MPI_Iprobe(0, TERMINATE_TAG, MPI_COMM_WORLD, &flag, &status);
+    MPI_Iprobe(base_rank, TERMINATE_TAG, MPI_COMM_WORLD, &flag, &status);
     if (flag) {
-        MPI_Recv(buf, sizeof(buf), MPI_BYTE, 0, TERMINATE_TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+        MPI_Recv(buf, sizeof(buf), MPI_BYTE, base_rank, TERMINATE_TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
         *done = 1;
     }
 }
@@ -37,14 +41,14 @@ void check_base_response(int wrank, double *sent_at) {
     int flag, bytes;
     MPI_Status status;
     BaseResponse response;
-    MPI_Iprobe(0, RESPONSE_TAG, MPI_COMM_WORLD, &flag, &status);
+    MPI_Iprobe(base_rank, RESPONSE_TAG, MPI_COMM_WORLD, &flag, &status);
     if (!flag) return;
     MPI_Get_count(&status, MPI_BYTE, &bytes);
-    MPI_Recv(&response, sizeof(BaseResponse), MPI_BYTE, 0, RESPONSE_TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+    MPI_Recv(&response, sizeof(BaseResponse), MPI_BYTE, base_rank, RESPONSE_TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
     double delay = MPI_Wtime() - *sent_at;
-    log_time("report_rtt", wrank, 0, delay, (int)sizeof(NodeReport) + bytes);
+    log_time("report_rtt", wrank, base_rank, delay, (int)sizeof(NodeReport) + bytes);
     if (response.available_count == 0) {
-        printf("Rank %d: base station reports no available capacity, delay=%.2f seconds\n", wrank, delay);
+        printf("Rank %d: base station (rank %d) reports no available capacity, delay=%.2f seconds\n", wrank, base_rank, delay);
     } else {
         printf("Rank %d: forwarding EVs to nodes:", wrank);
         for (int i = 0; i < response.available_count; i++) printf(" %d", response.available_nodes[i]);
@@ -109,9 +113,9 @@ void decide(NodeReport *r, int wrank, double *sent_at) {
     }
     r->timestamp = (double)time(NULL); // seconds since the epoch
     double t = MPI_Wtime();
-    MPI_Send(r, sizeof(NodeReport), MPI_BYTE, 0, REPORT_TAG, MPI_COMM_WORLD);
+    MPI_Send(r, sizeof(NodeReport), MPI_BYTE, base_rank, REPORT_TAG, MPI_COMM_WORLD);
     *sent_at = MPI_Wtime();
-    log_time("report_send", wrank, 0, *sent_at - t, (int)sizeof(NodeReport)); // how long the send call blocked
+    log_time("report_send", wrank, base_rank, *sent_at - t, (int)sizeof(NodeReport)); // how long the send call blocked
     printf("Rank %d: neighbours full, reported congestion to base station\n", wrank);
 }
 
@@ -134,8 +138,11 @@ int main(int argc, char *argv[]){
     int provided;
     MPI_Init_thread(&argc, &argv, MPI_THREAD_FUNNELED, &provided);
     int wrank, wsize, m = argc > 2 ? atoi(argv[1]) : 3, n = argc > 2 ? atoi(argv[2]) : 3;
+    double sim_seconds = argc > 3 ? atof(argv[3]) : DEFAULT_SIMULATION_TIME;
+    double window_seconds = argc > 4 ? atof(argv[4]) : DEFAULT_TIME_WINDOW;
     MPI_Comm_rank(MPI_COMM_WORLD, &wrank);
     MPI_Comm_size(MPI_COMM_WORLD, &wsize);
+    base_rank = wsize - 1;
 
     if (wsize != m * n + 1) {
         if (wrank == 0) fprintf(stderr, "Need %d processes\n", m * n + 1);
@@ -143,10 +150,14 @@ int main(int argc, char *argv[]){
         return 1;
     }
 
-    // rank 0 is base station, rank 1...m*n are charging nodes
+    // rank 0...m*n-1 are charging nodes, last rank is base station
     MPI_Comm nodes, grid;
-    MPI_Comm_split(MPI_COMM_WORLD, wrank == 0 ? MPI_UNDEFINED : 0, wrank, &nodes);
-    if (wrank != 0) {
+    MPI_Comm_split(MPI_COMM_WORLD, wrank == base_rank ? MPI_UNDEFINED : 0, wrank, &nodes);
+    if (wrank == base_rank) {
+        char path[64];
+        snprintf(path, sizeof(path), "base_station_%dx%d.log", m, n);
+        if (run_base_station(m, n, sim_seconds, window_seconds, path) != 0) MPI_Abort(MPI_COMM_WORLD, 1);
+    } else {
         int dimensions[2] = {m, n}, wraparound[2] = {0, 0}, id, xy[2], shift_res[MAX_NEIGHBOURS];
         NodeReport report = {0};
 
@@ -158,8 +169,8 @@ int main(int argc, char *argv[]){
 
         report.node_rank = wrank; report.x = xy[0]; report.y = xy[1]; 
 
-        for (int i = 0; i < MAX_NEIGHBOURS; i++)   /* grid rank + 1 = world rank */
-            if (shift_res[i] != MPI_PROC_NULL) report.neighbour_ranks[report.neighbour_count++] = shift_res[i] + 1;
+        for (int i = 0; i < MAX_NEIGHBOURS; i++) 
+            if (shift_res[i] != MPI_PROC_NULL) report.neighbour_ranks[report.neighbour_count++] = shift_res[i];
         printf("Rank %d (%d,%d) neighbours=%d:", wrank, xy[0], xy[1], report.neighbour_count);
         for (int i = 0; i < report.neighbour_count; i++) printf(" %d", report.neighbour_ranks[i]);
         printf("\n");
