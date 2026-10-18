@@ -5,6 +5,10 @@
 #include <omp.h>
 
 /*
+Code Comments were created with help of Google Gemini to ensure readability and understandability for accessor. 
+*/
+
+/*
 Our isPrime function
 input: integer n
 returns 0 for not prime, 1 for prime
