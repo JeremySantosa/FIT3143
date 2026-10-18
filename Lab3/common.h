@@ -1,4 +1,4 @@
-
+// created with aid of GPT 5.6. used to help coordinate protocols and message tags between task 1 and task 2 development
 #ifndef COMMON_H
 #define COMMON_H
 
