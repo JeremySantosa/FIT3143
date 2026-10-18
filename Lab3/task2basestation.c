@@ -8,6 +8,12 @@
 #include <time.h>
 
 /*
+ * comments + function headers were created using GPT 5.6, to speed up coding implementation and readability for documentation for other readers. 
+ * used to also "prettify" code, to make all indent and spaces consistent, allowing better readability to user. 
+
+*/
+
+/*
  * MPI protocol:
  * Messages are transmitted as raw struct bytes. Both sides must use the
  * same common.h, ABI, and architecture. For heterogeneous systems, use
