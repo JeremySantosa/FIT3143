@@ -13,6 +13,8 @@
 
 */
 
+/* Author: Saam Wadyalkar */
+
 /*
  * MPI protocol:
  * Messages are transmitted as raw struct bytes. Both sides must use the

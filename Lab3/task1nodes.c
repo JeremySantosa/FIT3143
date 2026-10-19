@@ -1,6 +1,8 @@
 // Claude generated some helper code for log timing and for allowing the code to work with the generated helper scripts for summary and analyse.
 // Used due to time constraints and to quickly integrate with the analysis scripts.
 
+// Author: Jeremy William Santosa
+
 #include <stdio.h>
 #include <mpi.h> // MPI header
 #include <omp.h>
